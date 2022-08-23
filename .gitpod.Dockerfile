@@ -1,8 +1,8 @@
-from gitpod/workplace-full
+FROM gitpod/workplace-full
 
-user gitpod
+USER gitpod
 
-run bash -c ". /home/gitpod/ .sdkman-init.sh && \
+RUN bash -c ". /home/gitpod/ .sdkman-init.sh && \
     sdk install java 17.0.3-ms && \
     sdk default java 17.0.3-ms"
     
